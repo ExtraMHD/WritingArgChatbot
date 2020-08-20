@@ -1,0 +1,828 @@
+intents:
+  - greet
+  - first_name
+  - nice_name
+  - agree
+  - cool
+  - introduce
+  - remind
+  - understood
+  - compliment
+  - doubting
+  - importance
+  - studies
+  - convinced
+  - details
+  - BobNC
+  - authNC
+  - logicNC
+  - BobNCfirst
+  - authNCfirst
+  - logicNCfirst
+  - LowEsteem
+  - perfectionism
+  - NotConvinced
+  - startExercise
+  - ArgPerf1st
+  - ArgumentPperfectionism
+  - StoryPerfFirssst
+  - PerfMiddleBOB
+  - PerfectioFirrrsstAuth
+  - authorityPerfMiddle
+  - FirstLowEstEncour
+  - LEstHalfArcourage
+  - BobAwalLE
+  - LEStoryMiddle
+  - AuthFawalLE
+  - LowEstAuthMid
+
+
+
+  
+
+actions:
+- utter_greet
+- utter_firstname
+- utter_nicename
+- utter_introduce
+- utter_coach
+- utter_nothuman
+- utter_trained
+- utter_knowsEx
+- utter_sure
+- utter_exercises1
+- utter_exercises2
+- utter_exercises3
+- utter_exercises4
+- utter_exercises5
+- utter_okay
+- utter_thanks
+- utter_blush
+- utter_start
+- utter_starting
+- utter_If_convinced
+- utter_great
+- utter_startExercises
+- utter_Ack_NotConvinced
+- utter_Ack_Perf
+- utter_Ack_LowEst
+- utter_motv_LowEst_Empathy
+- utter_motv_LowEst_ifARG
+- utter_motv_LowEst_ifARG_first
+- utter_motv_LowEst1
+- utter_motv_LowEst2
+- utter_motv_LowEst3
+- utter_motv_LowEst4
+- utter_motv_LowEst5
+- utter_LowEst_IF_Bob
+- utter_LowEst_IF_Bob_first
+- utter_motv_LowEst_Bob_empathy
+- utter_motv_LowEst_Bob1
+- utter_motv_LowEst_Bob2
+- utter_motv_LowEst_Bob3
+- utter_motv_LowEst_Bob4
+- utter_motv_LowEst_Bob5
+- utter_LowEst_IF_Authority_first
+- utter_LowEst_IF_Authority
+- utter_motv_LowEst_auth1
+- utter_motv_LowEst_auth2
+- utter_motv_LowEst_auth3
+- utter_motv_LowEst_auth4
+- utter_motv_Perfectionism_Empathy
+- utter_motv_perfectionism_ifARG
+- utter_motv_perfectionism_ifARG_first
+- utter_motv_perfectionism0
+- utter_motv_perfectionism1
+- utter_motv_perfectionism2
+- utter_motv_perfectionism3
+- utter_Perf_IF_Bob
+- utter_Perf_IF_Bob_first
+- utter_motv_Perf_Bob_empathy
+- utter_motv_Perf_Bob1
+- utter_motv_Perf_Bob2
+- utter_motv_Perf_Bob3
+- utter_motv_Perf_Bob4
+- utter_motv_Perf_Bob5
+- utter_Perf_IF_Authority
+- utter_Perf_IF_Authority_first
+- utter_motv_Perf_auth1
+- utter_motv_Perf_auth2
+- utter_motv_Perf_auth3
+- utter_motv_NotConvinced_Empathy
+- utter_motv_NotConvinced_St_im
+- utter_motv_NotConvinced_St_im_first
+- utter_motv_NotConvinced_importance_Empathy
+- utter_motv_NotConvinced_importance1
+- utter_motv_NotConvinced_importance2
+- utter_motv_NotConvinced_importance3
+- utter_NC_IF_Studies
+- utter_NC_IF_importance
+- utter_motv_NotConvinced_studies_Empathy
+- utter_motv_NotConvinced_studies1
+- utter_motv_NotConvinced_studies2
+- utter_motv_NotConvinced_studies3
+- utter_NC_IF_Bob
+- utter_NC_IF_Bob_first
+- utter_motv_NotConvinced_Bob1
+- utter_motv_NotConvinced_Bob12
+- utter_motv_NotConvinced_Bob2
+- utter_motv_NotConvinced_Bob3
+- utter_motv_NotConvinced_Bob33
+- utter_motv_NotConvinced_IF_BobBoss
+- utter_NC_IF_Authority
+- utter_NC_IF_Authority_first
+- utter_motv_NotConvinced_auth1
+- utter_motv_NotConvinced_auth2
+- utter_motv_NotConvinced_auth3
+- utter_motv_NotConvinced_auth4
+- utter_motv_NotConvinced_auth33
+- utter_motv_AnotherThing1
+- utter_motv_AnotherThing2
+- utter_motv_AnotherThing3
+- utter_start_all_paths
+- utter_startCH
+
+
+
+
+
+templates:
+
+  utter_greet:
+  - text: "Hi there *wave* I'm chatbot"
+    buttons:
+    - title: "Hi chatbot"
+      payload: "/first_name"
+
+
+  utter_firstname:
+  - text: "Can you tell me a nickname that I can call you? (Write it in the field below then press enter.)"
+    buttons:
+
+
+
+  utter_nicename:
+  - text: "name***. That's a nice name."
+    buttons:
+    - title: "Thanks"
+      payload: "/introduce"
+    - title: "Chatbot is a nice name, too"
+      payload: "/compliment"
+      
+  utter_introduce:
+  - text: "So name***, I'm a motivational assistant"
+
+
+  utter_coach:
+  - text: "I'm like a little coach who can help in performing cognitive therapy exercises"
+    buttons:
+    - title: "This sounds cool"
+      payload: "/cool"
+    - title: "Are you a person?"
+      payload: "/doubting"
+      
+  utter_nothuman:
+  - text: "I'm not a human, but in a way I'm still a person"
+      
+ 
+  utter_trained:
+  - text: "I've been trained specifically for arguments writing exercises."
+    buttons:
+    - title: "Fancy"
+      payload: "/agree"
+
+
+  utter_knowsEx:
+  - text: "Oh good, so you already know about gathering evidence to support the alternative thoughts."
+    buttons:
+    - title: "I do"
+      payload: "/agree"
+    - title: "Remind me"
+      payload: "/remind"
+
+  utter_sure:
+  - text: "Sure!"
+
+  utter_exercises1:
+  - text: "After forming the new alternative thoughts, they may not be as believable as the old thought."
+  
+  utter_exercises2:
+  - text: "Therefore, the new thoughts need to be strengthened through gathering evidence that support them and weakens the old believe."
+  
+  utter_exercises3:
+  - text: "This should be an ongoing process. As it’s not enough for people to just come to therapy sessions and talk."
+    buttons:
+    - title: "Got it"
+      payload: "/understood"
+    - title: "any examples?"
+      payload: "/"
+
+  utter_exercises4:
+  - text: "But remember that this isn’t like school homework. This is homework that you think will help."
+  
+  
+  utter_exercises5:
+  - text: "So, name***, what should we call these exercises?"
+    buttons:
+    - title: "just exercises"
+      payload: "/agree"
+    - title: "Homework"
+      payload: "b"
+    - title: "action plan"
+      payload: "b"
+      
+      
+  utter_okay:
+  - text: "Okay"
+  
+  utter_thanks:
+  - text: "Thanks *smiley*"
+  
+  utter_blush:
+  - text: "Thanks *blushing*"
+
+
+  utter_motv_AnotherThing1:
+  - text: "Okay, let me tell you something:"
+  
+  utter_motv_AnotherThing2:
+  - text: "Hmm.. How about this:"
+  
+  utter_motv_AnotherThing3:
+  - text: "So, what about the following:"
+  
+  
+  utter_start_all_paths:
+  - text: "Let's start with the first writing arguments exercise and see how it goes!"
+    buttons:
+    - title: "Let's do it"
+      payload: "/understood"
+
+      
+  utter_If_convinced:
+  - text: "I'm happy I was able to help! *blushing*"
+
+
+
+  utter_start:
+  - text: "Should we start with the first writing arguments exercise then?"
+    buttons:
+    - title: "Let's do it"
+      payload: "/understood"
+    - title: "Alright"
+      payload: "/understood"
+
+
+
+  utter_startCH:
+  - text: "Should we start preparing to do the writing arguments exercise?"
+    buttons:
+    - title: "Let's do it"
+      payload: "/understood"
+    - title: "Alright"
+      payload: "/understood"
+
+
+  
+  utter_great:
+  - text: "Great"
+  
+  
+  utter_starting:
+  - text: "Okay, let us start by identifing what barrier you have entered."
+
+
+
+  
+  
+  utter_startExercises:
+  - text: "Nice *cheering*. just click start button to start the exercise."
+  
+  
+  
+  utter_Ack_NotConvinced:
+  - text: "You said that you have some worries regarding the exercise usefulness."
+    buttons:
+    - title: "Yes"
+      payload: "/agree"
+    - title: "Sort of"
+      payload: "/agree"
+  
+  utter_Ack_Perf:
+  - text: "You said that you have some worries regarding your high expectation of your performance for doing the exercise."
+    buttons:
+    - title: "Yes"
+      payload: "/agree"
+    - title: "Sort of"
+      payload: "/agree"
+  
+  
+  utter_Ack_LowEst:
+  - text: "You said that you have some worries regarding your ability to do the exercise."
+    buttons:
+    - title: "Yes"
+      payload: "/agree"
+    - title: "Sort of"
+      payload: "/agree"
+  
+
+
+
+
+
+
+  utter_motv_LowEst_Empathy:
+  - text: "Your reaction regarding your ability to write arguments is normal at this stage."
+
+
+  utter_motv_LowEst_ifARG:
+  - text: "I can tell you what I think about this exercise difficulty."
+    buttons:
+    - title: "I'm interested"
+      payload: "/agree"
+    - title: "No, it’s alright"
+      payload: "/convinced"
+
+  utter_motv_LowEst_ifARG_first:
+  - text: " I can tell you what I think about this exercise difficulty."
+    buttons:
+    - title: "I'm interested"
+      payload: "/agree"
+    - title: "I'm listening.."
+      payload: "/agree"
+
+
+
+  utter_motv_LowEst1:
+  - text: "It is like part of the game."
+
+  utter_motv_LowEst2:
+  - text: "In the beginning, it may be difficult, but when you are past the most difficult period it only helps you."
+
+
+  
+  utter_motv_LowEst3:
+  - text: "You are a go-getter and you will do very well!"
+    buttons:
+    - title: "Yes, I am!"
+      payload: "/agree"
+    - title: "*blushes*"
+      payload: "/agree"
+    - title: "Okay"
+      payload: "/agree"
+
+
+  utter_motv_LowEst4:
+  - text: "You're well on your way! You can do it"
+
+  utter_motv_LowEst5:
+  - text: "*pic*"
+    buttons:
+    - title: "Thanks!"
+      payload: "/introduce"
+
+
+
+
+  utter_LowEst_IF_Bob:
+  - text: "I can tell you a story about Tom, if you are interested!" 
+    buttons:
+    - title: "Yeah please do"
+      payload: "/agree"
+    - title: "No, it’s alright"
+      payload: "/convinced"
+
+  utter_LowEst_IF_Bob_first:
+  - text: "I can tell you a story about Tom, if you are interested!" 
+    buttons:
+    - title: "Yeah please do"
+      payload: "/agree"
+    - title: "I'm listening.."
+      payload: "/agree"
+
+
+  utter_motv_LowEst_Bob_empathy:
+  - text: "Good choice! The story can show you how he dealt with writing arguments." 
+    buttons:
+    - title: "Okay"
+      payload: "/agree"
+
+
+
+  utter_motv_LowEst_Bob1:
+  - text: "The following story about Tom was told by Kazantzis and others in their book “Using Homework Assignments in Cognitive Behavior Therapy”."
+
+  utter_motv_LowEst_Bob2:
+  - text: "Tom was an accountant who was having difficulty with work, decision-making and had regrets toward past investments. So, he was afraid to make any decision now that he might regret later." 
+    buttons:
+    - title: "Okay"
+      payload: "/agree"
+    - title: "um-hum"
+      payload: "/agree"  
+
+
+
+  utter_motv_LowEst_Bob3:
+  - text: "To change this thought, Tom was asked to do arguments writing exercises, but eventually, he started to avoid doing them. Tom thought he was not able to do the exercises and felt bad about himself." 
+
+
+  utter_motv_LowEst_Bob4:
+  - text: "So, he broke down the exercise into smaller tasks to make it easier to do." 
+  
+  utter_motv_LowEst_Bob5:
+  - text: "After writing arguments for some time, Tom felt better because he found the writing arguments exercise became easier the more he did it."
+    buttons:
+    - title: "Good for Bob!"
+      payload: "/agree"
+    - title: "Whatever.."
+      payload: "/agree"
+
+
+  utter_LowEst_IF_Authority_first:
+  - text: "I can tell you what therapists think about writing arguments exercise." 
+    buttons:
+    - title: "Yeah I’m interested"
+      payload: "/agree"
+    - title: "I'm listening.."
+      payload: "/agree"
+
+
+
+  utter_LowEst_IF_Authority:
+  - text: "I can tell you what therapists think about writing arguments exercise." 
+    buttons:
+    - title: "Yeah I’m interested"
+      payload: "/agree"
+    - title: "No, it’s alright"
+      payload: "/convinced"
+
+
+  utter_motv_LowEst_auth1:
+  - text: "Psychologists consider the arguments writing exercise an essential part of cognitive behavioural therapy, which is a therapy that is widely used due to its effectiveness."
+
+  utter_motv_LowEst_auth2:
+  - text: "Therapists said that people often struggle with doing the writing arguments exercise, usually at the beginning stages." 
+    buttons:
+    - title: "Okay"
+      payload: "/agree"
+
+
+  utter_motv_LowEst_auth3:
+  - text: "However, therapists also reported the more the individual does this exercise, the easier it gets." 
+
+
+
+  utter_motv_LowEst_auth4:
+  - text: " They also say it’s ok if the exercise is not done all the way, but it's better to be done nonetheless." 
+    buttons:
+    - title: "Very good"
+      payload: "/agree"
+    - title: "um-hum"
+      payload: "/agree"  
+
+
+
+
+
+
+
+
+
+
+
+  utter_motv_Perfectionism_Empathy:
+  - text: "It's common while writing arguments to try and do everything perfectly."
+
+  utter_motv_perfectionism_ifARG:
+  - text: "I can tell you more about how perfectionism can affect the writing arguments task."
+    buttons:
+    - title: "Yeah please do"
+      payload: "/agree"
+    - title: "No, I'm convinced"
+      payload: "/convinced"
+
+  utter_motv_perfectionism_ifARG_first:
+  - text: "I can tell you more about how perfectionism can affect the writing arguments task, if you are interested."
+    buttons:
+    - title: "Yeah please do"
+      payload: "/agree"
+    - title: "I'm listening.."
+      payload: "/agree"
+
+
+  utter_motv_perfectionism0:
+  - text: "That’s a good point."
+
+  utter_motv_perfectionism1:
+  - text: "Remember that you should not strive for perfection while doing the exercise."
+    buttons:
+    - title: "Okay"
+      payload: "/agree"
+
+  utter_motv_perfectionism2:
+  - text: "The exercises are not meant to be answered perfectly."
+
+  
+  utter_motv_perfectionism3:
+  - text: "Learning to write arguments is a skill, like learning the computer. You’ll get better with practice."
+    buttons:
+    - title: "Got it"
+      payload: "/understood"
+  
+
+  utter_Perf_IF_Bob:
+  - text: "I can tell you a story about Andrew, if you are interested!" 
+    buttons:
+    - title: "Yeah please do"
+      payload: "/agree"
+    - title: "No, it’s alright"
+      payload: "/convinced"
+
+  utter_Perf_IF_Bob_first:
+  - text: "I can tell you a story about Andrew, if you are interested!" 
+    buttons:
+    - title: "Yeah please do"
+      payload: "/agree"
+    - title: "I'm listening.."
+      payload: "/agree"
+
+  utter_motv_Perf_Bob_empathy:
+  - text: "Good! The story can show you how he overcame his issue of perfectionism while writing arguments." 
+    buttons:
+    - title: "Okay"
+      payload: "/agree"
+
+
+  utter_motv_Perf_Bob1:
+  - text: "The following story about Andrew was told by Kazantzis and others in their book “Using Homework Assignments in Cognitive Behavior Therapy”."
+
+  utter_motv_Perf_Bob2:
+  - text: "Andrew was on a holiday in Turkey when England beat Turkey at a football match and he wore his England shirt the next day." 
+    buttons:
+    - title: "Okay"
+      payload: "/agree"
+    - title: "um-hum"
+      payload: "/agree"
+
+  utter_motv_Perf_Bob3:
+  - text: "In a restaurant, he noticed Turkish people giving him hostile looks, and he became increasingly worried that he caused offense and may be harmed during his stay." 
+
+
+  utter_motv_Perf_Bob4:
+  - text: "To change this thought, Andrew was asked to do arguments writing exercises, but he feared that he would make small mistakes while writing the arguments." 
+  
+  utter_motv_Perf_Bob5:
+  - text: "So, he tried to do the exercises without worrying about writing everything perfectly. After writing arguments for some time, Andrew felt better as he noticed an improvement in his mood despite making smaller mistakes." 
+    buttons:
+    - title: "Good for Bob!"
+      payload: "/agree"
+    - title: "Whatever.."
+      payload: "/agree"
+
+
+  utter_Perf_IF_Authority:
+  - text: "I can tell you what therapists think about writing arguments exercise." 
+    buttons:
+    - title: "Yeah I’m interested"
+      payload: "/agree"
+    - title: "No, I’m already convinced"
+      payload: "/convinced"
+
+
+  utter_Perf_IF_Authority_first:
+  - text: "I can tell you what therapists think about writing arguments exercise." 
+    buttons:
+    - title: "Yeah I’m interested"
+      payload: "/agree"
+    - title: "I'm listening.."
+      payload: "/agree"
+
+  utter_motv_Perf_auth1:
+  - text: "Therapists consider the arguments writing exercise an essential part of cognitive behavioural therapy, which is a therapy that is widely used due to its effectiveness."
+
+  utter_motv_Perf_auth2:
+  - text: "The exercise completion is often seen by therapists as a prediction of whether the therapy will work." 
+
+  utter_motv_Perf_auth3:
+  - text: " Therapists say it’s ok if the exercise is not done perfectly right, but it's better to be done nonetheless." 
+    buttons:
+    - title: "Very good"
+      payload: "/agree"
+    - title: "um-hum"
+      payload: "/agree"  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+  utter_motv_NotConvinced_Empathy:
+  - text: "It's alright if you do not fully believe that the positive thought can replace the negative thought."
+
+  utter_motv_NotConvinced_St_im:
+  - text: "What would you like to know more about:"
+    buttons:
+    - title: "Why writing arguments is important?"
+      payload: "/importance"
+    - title: "Any evidence from studies?"
+      payload: "/studies"
+    - title: "Nothing, I’m convinced"
+      payload: "/convinced"
+      
+  utter_motv_NotConvinced_St_im_first:
+  - text: "What would you like to know more about:"
+    buttons:
+    - title: "Why writing arguments is important?"
+      payload: "/importance"
+    - title: "Any evidence from studies?"
+      payload: "/studies"
+      
+      
+
+
+
+  utter_motv_NotConvinced_importance_Empathy:
+  - text: "That’s a good question to understand the rationale behind doing the exercise."
+  
+  
+  utter_motv_NotConvinced_importance1:
+  - text: "After forming the positive thoughts, they may not be as believable as the negative thought."
+    buttons:
+    - title: "Okay"
+      payload: "/agree"
+    - title: "How to make them more believable?"
+      payload: "/agree" 
+  
+  
+
+  utter_motv_NotConvinced_importance2:
+  - text: "The positive thoughts need to be strengthened through writing arguments that supports them and weakens the negative thought."
+  
+  utter_motv_NotConvinced_importance3:
+  - text: "As your belief in the positive thought increases, your improved mood will stabilize." 
+    buttons:
+    - title: "That's good!"
+      payload: "/agree"
+    - title: "Whatever.."
+      payload: "/agree"
+      
+      
+      
+      
+
+  utter_NC_IF_Studies:
+  - text: "Would you like to know what research said about the writing arguments exercise?" 
+    buttons:
+    - title: "Yeah I’m interested"
+      payload: "/agree"
+    - title: "No, it's alright"
+      payload: "/convinced"
+
+  utter_NC_IF_importance:
+  - text: "Would you like to know why writing arguments is important?" 
+    buttons:
+    - title: "Yeah I’m interested"
+      payload: "/agree"
+    - title: "No, it's alright"
+      payload: "/convinced"
+
+  utter_motv_NotConvinced_studies_Empathy:
+  - text: "Good point, because evidence from studies makes usefulness clearer."
+
+  utter_motv_NotConvinced_studies1:
+  - text: "Research has found that doing writing arguments exercise positively predicts successful outcomes in therapy."
+    buttons:
+    - title: "Okay"
+      payload: "/agree"
+    - title: "hmm.."
+      payload: "/agree" 
+  
+  
+
+  utter_motv_NotConvinced_studies2:
+  - text: "Kazantzis and others combined the results of 32 studies and found that when people did more arguments writing exercise they had better outcomes." 
+
+
+  utter_motv_NotConvinced_studies3:
+  - text: "It is also considered as an essential part of therapy by many researchers."
+    buttons:
+    - title: "Very good"
+      payload: "/agree"
+    - title: "um-hum"
+      payload: "/agree" 
+      
+  
+  
+
+
+  utter_NC_IF_Bob:
+  - text: "I can tell you a story about Tom! This could show how writing arguments helped to improve his mood." 
+    buttons:
+    - title: "Yeah please do"
+      payload: "/agree"
+    - title: "No, I'm convinced"
+      payload: "/convinced"
+      
+  utter_NC_IF_Bob_first:
+  - text: "I can tell you a story about my Tom! This could show how writing arguments helped to improve his mood." 
+    buttons:
+    - title: "Yeah please do"
+      payload: "/agree"
+    - title: "I'm listening.."
+      payload: "/agree"
+
+  utter_motv_NotConvinced_Bob1:
+  - text: "The following story about Tom was told by Kazantzis and others in their book “Using Homework Assignments in Cognitive Behavior Therapy”." 
+  
+  utter_motv_NotConvinced_Bob12:
+  - text: "Tom was an accountant who was having difficulty with work, decision-making and had regrets toward past investments. So, he was afraid to make any decisions now that he might regret later." 
+    buttons:
+    - title: "Okay"
+      payload: "/agree"
+
+  utter_motv_NotConvinced_Bob2:
+  - text: "To change this thought, Tom was asked to do arguments writing exercises, which could have changed his negative thinking. " 
+
+
+  utter_motv_NotConvinced_Bob3:
+  - text: "After doing it for some time, Tom started to realize that he might be overreacting and coming up with frightening scenarios in his head, which made him more certain that things were really terrible." 
+    buttons:
+    - title: "Good for Bob!"
+      payload: "/agree"
+    - title: "Whatever.."
+      payload: "/agree"
+
+  utter_motv_NotConvinced_Bob33:
+  - text: "After writing arguments for some time, Bob became convinced that his boss doesn’t hate him and that in the contrary, his boss wanted the best for him and the company during almost all discussions." 
+    buttons:
+    - title: "Nice!"
+      payload: "/nice"
+
+
+  utter_motv_NotConvinced_IF_BobBoss:
+  - text: "Bob and his Boss had many negotiations regarding all sorts of stuff: salary, business trips, team lead etc. Bob’s boss has more experience and knowledge than Bob, so he usually takes the right decision." 
+    buttons:
+    - title: "Nice story"
+      payload: "/agree"
+
+
+  utter_NC_IF_Authority:
+  - text: "I can tell you what therapists think about writing arguments exercise." 
+    buttons:
+    - title: "Yeah I’m interested"
+      payload: "/agree"
+    - title: "No, I’m convinced"
+      payload: "/convinced"
+
+  utter_NC_IF_Authority_first:
+  - text: "I can tell you what therapists think about writing arguments exercise." 
+    buttons:
+    - title: "Yeah I’m interested"
+      payload: "/agree"
+    - title: "I'm listening.."
+      payload: "/agree"
+
+  utter_motv_NotConvinced_auth1:
+  - text: "Therapists consider the arguments writing exercise an essential part of cognitive behavioural therapy, which is a therapy that is widely used due to its effectiveness."
+
+  utter_motv_NotConvinced_auth2:
+  - text: "Therapists often see exercise completion as a prediction of whether the therapy will work." 
+    buttons:
+    - title: "Okay"
+      payload: "/agree"
+  
+
+  utter_motv_NotConvinced_auth3:
+  - text: "Also, Aaron Beck is the founder of cognitive behavioural therapy and one of the “five most influential psychotherapists of all time.”" 
+
+      
+  utter_motv_NotConvinced_auth4:
+  - text: "He considers the argument writing exercise an important part of cognitive behavioural therapy." 
+    buttons:
+    - title: "Very good"
+      payload: "/agree"
+    - title: "um-hum"
+      payload: "/agree"  
+      
+  utter_motv_NotConvinced_auth33:
+  - text: "Also, writing arguments was emphasized in the conception of CBT by its creator, Aaron Beck." 
+    buttons:
+    - title: "Nice!"
+      payload: "/nice"
+
+ 
+
+
+
+ 
